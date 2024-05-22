@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useFetch from '../hook/useFetch'
+import './PokedexPage/styles/SelectType.css'
 
 const SelectType = ( {setTypeSelected} ) => {
 
@@ -17,11 +18,11 @@ const SelectType = ( {setTypeSelected} ) => {
   }
   
   return (
-    <select onChange={handleChange} >
-      <option value="allPokemons">All Pokemons</option>
+    <select className='select__type' onChange={handleChange} >
+      <option value="allPokemons" aria-placeholder='sadsadsadsa' >Todos los Tipos:</option>
       {
         types?.results.map(typInfo => (
-          <option key={typInfo.url} value={typInfo.url}>{typInfo.name}</option>
+          <option className='select__type-option' key={typInfo.url} value={typInfo.url}>{typInfo.name}</option>
         ))
       }
     </select>

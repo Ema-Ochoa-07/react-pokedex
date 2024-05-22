@@ -11,7 +11,7 @@ const PokeCard = ( {poke} ) => {
     getPokemon(poke.url)  
 
   }, [])
-  // console.log(pokemon)
+  console.log(pokemon)
 
   const navigate = useNavigate()
 

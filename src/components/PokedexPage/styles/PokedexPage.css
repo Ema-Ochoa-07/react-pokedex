@@ -114,23 +114,41 @@
 }
 
 .dex__description{
+    padding: 2em;
+    font-size: 2em;
+    text-align: center;
+    font-size: 1.28em;
+    margin-bottom: -.5em;
+}
+
+.dex__description-1{
     width: 100%;
     min-width: 10em;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
     min-width: 5em;
-    text-align: center;
-    font-size: 1em;
     font-weight: 500;
+    color: #FE1936;
+}
+
+.dex__description-2{
+    width: 100%;
+    min-width: 10em;
+    min-width: 5em;
     color: #302F2F;
 }
+
+.dex__search{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3em;
+}
+
+
 
 .dex__form{
     display: flex;
     justify-content: center;
     gap: 1em 0;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
 }
 
 .dex__form-input{

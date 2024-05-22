@@ -1,0 +1,14 @@
+.paginate__number{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+    gap: 3.6em;
+}
+
+.paginate__btn{
+    background-color: #D93F3F;
+    color: aliceblue;
+    width: 3em;
+    height: 3em;
+    
+}
