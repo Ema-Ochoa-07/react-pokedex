@@ -13,11 +13,14 @@
     font-size: 1.3em;
     background-color: #D93F3F;
     color: aliceblue;
+    &:hover {
+        color: blue;
+    }
 }
 
-/* .select__type-option option:hover{
-    background: #D93F3F;
+.select__type-option:hover{
+    background: #13e224;
     color: aliceblue;
-} */
+}
 
 

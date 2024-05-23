@@ -1,0 +1,146 @@
+.info{
+    margin-top: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 65em;
+    border: 0.2em solid #aaa ;
+    border-radius: 0.8em;
+    cursor: pointer;
+}
+
+
+.info__img{
+    background-color: #777;
+    width: 100%;
+    aspect-ratio: 2.8;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.info__img-poke{
+    position: absolute;
+    width: 40%;
+    min-width: 10em;
+    top: -6em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.info__id{
+    width: max-content;
+    padding: 0.18em 1em; 
+    border-color: #7771;
+    background-color: rgba(218, 218, 224, 0.932);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info__title{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.info__title-name{
+    display: inline-block;
+    position: relative;
+}
+
+.info__title-name::before, .info__title-name::after{
+    content: '';
+    position: absolute;
+    width: 9em;
+    min-width: 60%;
+    height: 0.068em;
+    background-color: black;
+    top: 0.6em;
+}
+
+.info__title-name::before{
+    left: -9.8em;
+}
+
+.info__title-name::after{
+    right: -9.8em;
+}
+
+
+.info__dimensions{
+    display: flex;
+    gap: 1em; 
+    justify-content: center;
+    padding-bottom: 0.5em;
+}
+
+.info__dimension-weight, .info__dimension-height{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__characteristic{
+    display: flex;
+    justify-content: center;
+    gap: 1em 15em;
+}
+
+.info__characteristic-types, .info__characteristic-skills{
+    font-size: 1.2em;
+    font-weight: 680;
+    color: rgb(22, 22, 22);
+}
+
+.info__characteristic-item1{
+    display: flex;
+    gap: 0.7em;    
+}
+
+.info__characteristic-item2{
+    display: flex;
+    gap: 0.7em;    
+}
+
+.info__type, .info__skill{
+    width: max-content;
+    padding: 0.18em 1em; 
+    border-color: #7771;
+    background-color: rgba(218, 218, 224, 0.932);
+}
+
+.info__stats-list{
+    display: flex;
+    gap: 0 5em;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.loaders{
+    position: relative;
+    width: 90%;
+    height: 0.9em;
+    background-color: rgb(185, 185, 190);
+    border-radius: 0.3em;
+    overflow: hidden;
+    margin: 0.6em 0.88em;
+}
+
+.info__stats-item{
+    position: relative;
+    height: 0.9em;
+    background-color: rgba(4, 64, 92, 0.822);
+    border-radius: 0.3em;
+    overflow: hidden;
+    margin: 0.6em 0;
+    top: -0.6em;
+}
+
+
+/* .info__stats-item::before{
+    content: '';
+    position: absolute;
+    width: var();
+    height: 100%;
+    background-color: blue;
+
+} */
