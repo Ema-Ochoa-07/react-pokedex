@@ -58,7 +58,7 @@ const PokedexPage = () => {
             <div className='dex__header-box2' ></div>
             
             <div className='dex__header-img'>
-              <img className='dex__img' src="../public/images/pokedex.png" alt="" />
+              <img className='dex__img' src="../images/pokedex.png" alt="" />
             </div>
 
            <div className='dex__circle' >
