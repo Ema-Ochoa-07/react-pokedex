@@ -15,6 +15,11 @@ const HomePage = () => {
   const inputTrainer = useRef()
 
   const handleSubmit = e => {
+
+    window.scrollTo({
+      top: 0,
+    });
+
     e.preventDefault()
     dispatch(setTrainer(inputTrainer.current.value.trim()))
     navigate('/pokedex')

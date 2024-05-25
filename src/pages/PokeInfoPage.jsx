@@ -15,7 +15,7 @@ const PokeInfoPage = () => {
 
   }, [name])
   
-console.log(pokemon)
+// console.log(pokemon)
 
 // líneas de carga
 let loader1 = (pokemon?.stats[0].base_stat) + ""+ "%"
