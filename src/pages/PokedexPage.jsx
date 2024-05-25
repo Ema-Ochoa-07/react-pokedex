@@ -5,23 +5,14 @@ import PokeCard from '../components/PokedexPage/PokeCard'
 import SelectType from '../components/SelectType'
 import '../components/PokedexPage/styles/PokedexPage.css'
 import Pagination from '../components/Pagination/Pagination'
+import { Link } from 'react-router-dom'
 
 const PokedexPage = () => {
   
     /**Recibir la petición Fetch** */
   const [ pokemons, getPokemons, getTypePokemon ] = useFetch()
 
-    /**PAGINATION*/
-    const [cantPokemons, setcantPokemons] = useState(20)
-    const [paginate, setPaginate] = useState(1)
-  
-    const endIndex =  paginate * cantPokemons
-    const startIndex = endIndex - cantPokemons
-
-    const pokemonsXPage = pokemons?.results.slice(startIndex, endIndex)
-    const totalPages = Math.ceil(pokemons?.results.length / cantPokemons)
-
-
+   
     /******** */ 
   const [typeSelected, setTypeSelected] = useState('allPokemons')
 
@@ -51,15 +42,25 @@ const PokedexPage = () => {
     return filterName
   }
 
+   /**PAGINATION*/
+   const [cantPokemons, setcantPokemons] = useState(20)
+   const [paginate, setPaginate] = useState(1)
+ 
+   const endIndex =  paginate * cantPokemons
+   const startIndex = endIndex - cantPokemons
+
+   const pokemonsXPage = pokemons?.results.filter(callbackFilter).slice(startIndex, endIndex)
+   const totalPages = Math.ceil(pokemons?.results.length / cantPokemons)
+
   return (
-    <div>
+    <div className='container_pokedex-page'>
       <header  className='dex__header'>
             <div className='dex__header-box1'></div>
             <div className='dex__header-box2' ></div>
             
-            <div className='dex__header-img'>
-              <img className='dex__img' src="../images/pokedex.png" alt="" />
-            </div>
+            <div className='info__header-img'>
+                <Link to = '/pokedex'> <img className='dex__img' src="../images/pokedex.png" alt=""/></Link>
+              </div>
 
            <div className='dex__circle' >
               <div className="dex__circle-outer">
@@ -71,7 +72,9 @@ const PokedexPage = () => {
             </div>
            </div>
       </header>
-      <div className='dex__description' >
+      
+      <div>
+              <div className='dex__description' >
         <span className='dex__description-1' >Bienvenido {trainer},</span>
         <span className='dex__description-2'>   aquí podrás encontrar tu pokemon favorito:</span>
       </div>
@@ -80,13 +83,13 @@ const PokedexPage = () => {
       <form className='dex__form' onSubmit={handleSearch} action="">
           <input className='dex__form-input' ref={inputName} type="text" />
           <button className='dex__form-btn' >Buscar</button>
-        </form>
+      </form>
         <div className='select__types'>
           <SelectType setTypeSelected={setTypeSelected}/>
         </div>
       </div>
       
-      <div>
+      <div className='dex__pagination'>
         <Pagination 
           paginate={paginate}
           setPaginate={setPaginate}
@@ -99,7 +102,7 @@ const PokedexPage = () => {
           pokemons && pokemons.results.filter(callbackFilter).length == 0
           ? <h2>There are not pokemon that meet the filtes</h2>
           :(
-            pokemonsXPage?.filter(callbackFilter).map( poke => (
+            pokemonsXPage?.map( poke => (
               <PokeCard
                 key={poke.url}
                 poke={poke}
@@ -107,6 +110,7 @@ const PokedexPage = () => {
             ))
           )
         }
+      </div>
       </div>
     </div>
   )

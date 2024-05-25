@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useFetch from '../hook/useFetch'
 import '../components/PokeInfoPage/PokeInfoPage.css'
 
@@ -35,8 +35,8 @@ let loader6 = (pokemon?.stats[5].base_stat) + ""+ "%"
               <div className='dex__header-box1'></div>
               <div className='dex__header-box2' ></div>
               
-              <div className='dex__header-img'>
-                <img className='dex__img' src="../images/pokedex.png" alt="" />
+              <div className='info__header-img'>
+                <Link to = '/pokedex'> <img className='dex__img' src="../images/pokedex.png" alt=""/></Link>
               </div>
   
              <div className='dex__circle' >

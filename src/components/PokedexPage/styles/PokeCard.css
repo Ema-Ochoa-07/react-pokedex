@@ -6,6 +6,7 @@
     overflow: hidden;
     cursor: pointer;
     transform: 100ms ease;
+    padding: 0.2em;
     &:hover{
         transform: scale(1.03);
     }

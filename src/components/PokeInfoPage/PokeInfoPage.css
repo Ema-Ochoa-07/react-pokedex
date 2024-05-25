@@ -1,45 +1,49 @@
+
 .info__container{
     display: flex;
     flex-wrap: wrap;
     gap: 4em 1em;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4em;
-
+    padding-top: 6em;
+    margin: 0.7em;
 }
 
 /****Card****/
 
 .info{
     width: 100%;
-    max-width: 40em;    
+    max-width: 40em; 
     border: 0.2em solid #aaa ;
     border-radius: 0.4em;
     margin-top: 2em;
-    padding-bottom: 1em;
 }
 
 
 .info__img{
     background-color: #777;
     width: 100%;
-    aspect-ratio: 3.5;
+    aspect-ratio: -3.5;
     position: relative;
     border-radius: 0.3em;
 }
 
 .info__img-poke{
     position: absolute;
-    width: 50%;
-    min-width: 3.5em;
-    top: -70%;
-    left: 50%;
-    transform: translate(-50%);
+    width: 100%;
+    min-width: 4em;
+    max-width: 20em;
+    /* top: -13em; */
+    bottom: -1em;
+    margin-left: auto;
+    margin-right:auto ;
+    padding-bottom: 1em;
 }
 
 .info__id{
     width: max-content;
-    padding: 0.18em 1em; 
+    padding: 0.16em 1em; 
+    margin-top: -3em;
     border-color: #7771;
     background-color: rgba(218, 218, 224, 0.932);
     margin-left: auto;
@@ -69,10 +73,13 @@
 
 .info__title-name::before{
     left: -9.8em;
+    overflow: hidden;
 }
 
 .info__title-name::after{
     right: -9.8em;
+    overflow: hidden;
+
 }
 
 

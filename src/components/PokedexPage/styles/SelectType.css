@@ -1,8 +1,6 @@
 .select__type{
-    width: 18em;
-    min-width: 8em;
-    height: 3.35em;
-    min-height: .7em;
+    width: 100%;
+    height: 100%;
     text-align: center;
     border-color: black;
     border: 1em;
@@ -11,16 +9,14 @@
 
 .select__type-option{
     font-size: 1.3em;
-    background-color: #D93F3F;
-    color: aliceblue;
+    background-color: #ffffff;
+    color: rgb(3, 41, 74);
     &:hover {
         color: blue;
     }
 }
 
 .select__type-option:hover{
-    background: #13e224;
+    background: #0d025e;
     color: aliceblue;
 }
-
-

@@ -11,11 +11,15 @@ const PokeCard = ( {poke} ) => {
     getPokemon(poke.url)  
 
   }, [])
-  console.log(pokemon)
+  // console.log(pokemon)
 
   const navigate = useNavigate()
 
   const handleNavigate = ()  => {
+    window.scrollTo({
+      top: 0,
+      // behavior: 'smooth', // Esto es opcional, para un desplazamiento suave
+    });
     navigate(`/pokemon/${pokemon.name}`)
   }
 
